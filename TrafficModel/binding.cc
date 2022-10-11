@@ -63,7 +63,7 @@ PYBIND11_MODULE(TrafficModel,m) {
 		
 	// Vehicle class
 	py::class_<Vehicle>(m,"Vehicle")
-		.def(py::init<uint8_t>())
+		.def(py::init<int>())
 		.def_static("addVehicleType", static_cast<void (*)(uint16_t,uint16_t)>(&Vehicle::addVehicleType))
 		.def_static("addVehicleType", static_cast<void (*)(const char *)>(&Vehicle::addVehicleType))
 		.def_static("getVehicleType", &Vehicle::getVehicleType)
